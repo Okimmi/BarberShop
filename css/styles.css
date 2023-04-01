@@ -1,0 +1,292 @@
+:root {
+  --main-font-family: "Open Sans", sans-serif;
+  --bg-color: #ffffff;
+  --main-dark-theme-color: #ffffff;
+  --second-dark-theme-color: #9da4bd;
+  --main-light-theme-color: #303030;
+  --secont-light-theme-color: #555555;
+  --accent-color: #ff6c00;
+}
+
+/* ======== COMPONENT STYLES ======== */
+
+body {
+  font-family: var(--main-font-family);
+  font-weight: 600;
+  font-size: 18px;
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.btn {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-color: var(--accent-color);
+
+  cursor: pointer;
+}
+
+.btn-dark-theme {
+  color: var(--main-dark-theme-color);
+}
+
+.booking-btn-light-theme {
+  color: var(--main-light-theme-color);
+}
+
+.btn-dark-theme:hover,
+.btn-dark-theme:focus,
+.btn-light-theme:hover,
+.btn-light-theme:focus {
+  background-color: var(--accent-color);
+  color: var(--main-dark-theme-color);
+}
+
+.media-link {
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--main-light-theme-color);
+}
+
+.menu-item:hover,
+.menu-item:focus,
+.tel:hover,
+.tel:focus,
+.media-link:hover,
+.media-link:focus,
+.address:hover,
+.address:focus,
+.contacts:hover,
+.contacts:focus {
+  color: var(--accent-color);
+}
+
+.subtitle {
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+}
+
+.subtitle-dark-theme {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.subtitle-light-theme {
+  color: var(--main-light-theme-color);
+}
+
+.section-descr {
+  font-weight: 400;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+.section-descr-dark-theme {
+  color: var(--second-dark-theme-color);
+}
+
+.section-descr-light-theme {
+  color: var(--secont-light-theme-color);
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+
+  font-family: "Raleway", sans-serif;
+}
+
+.section-title-light-theme {
+  color: var(--main-light-theme-color);
+}
+
+.section-title-dark-theme {
+  color: var(--main-dark-theme-color);
+}
+
+/* ======== HEADER STYLES ======== */
+
+nav {
+  background-color: black;
+}
+
+.menu-item,
+.tel {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--main-dark-theme-color);
+  background-color: black;
+}
+
+/* ======== HERO STYLES ======== */
+
+.hero-section {
+  background-color: black;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+
+  color: var(--main-dark-theme-color);
+}
+
+.slider {
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  color: rgba(157, 164, 189, 0.6);
+  background-color: transparent;
+  border: transparent;
+}
+
+.slider-active {
+  color: var(--main-dark-theme-color);
+}
+
+.slider-forward {
+  text-align: right;
+}
+
+/* ======== ABOUT STYLES ======== */
+
+.about-section-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+
+  color: var(--secont-light-theme-color);
+}
+
+/* ======== PRICE STYLES ======== */
+
+#price {
+  background-color: black;
+}
+
+.price-table {
+  font-weight: 400;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--second-dark-theme-color);
+}
+
+/* ======== BENEFITS STYLES ======== */
+
+.num-benefit {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: var(--main-light-theme-color);
+}
+
+.plus {
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.benefit-item {
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+
+  color: var(--main-light-theme-color);
+}
+
+/* ======== TEAM STYLES ======== */
+
+#team {
+  background-color: #f7f7f7;
+}
+
+.employee-name {
+  font-weight: 400;
+  line-height: 1.67;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--main-light-theme-color);
+}
+
+.job-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+/* ======== BOOKING STYLES ======== */
+
+.booking {
+  background-color: #111319;
+}
+
+.form-item {
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.input-form {
+  background-color: transparent;
+  color: var(--main-dark-theme-color);
+}
+
+/* ======== CONTACTS STYLES ======== */
+
+#contacts {
+  background-color: black;
+}
+
+.address {
+  font-weight: 700;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--second-dark-theme-color);
+}
+
+.contacts {
+  font-weight: 400;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--second-dark-theme-color);
+}
+
+/* ======== FOOTER STYLES ======== */
+
+.copyright {
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--second-dark-theme-color);
+}
