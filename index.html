@@ -54,16 +54,16 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     </header>
     <main>
       <!-- Hero -->
-      <section>
+      <section class="hero-wrapper">
         <div class="container hero-container">
-          <ul class="media-block">
+          <ul class="media-list">
             <li class="media-item">
               <a
                 class="media-link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                >Youtube</a
+                >Instagram</a
               >
             </li>
             <li class="media-item">
@@ -72,7 +72,7 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                >Instagram</a
+                >Youtube</a
               >
             </li>
           </ul>
@@ -88,10 +88,10 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
               </p>
             </div>
             <ul class="slider-container">
-              <li>
-                <button type="button" class="slider">Back</button>
+              <li class="slider-wrapper">
+                <button type="button" class="slider slider-back">Back</button>
               </li>
-              <li>
+              <li class="slider-wrapper slider-active">
                 <button
                   type="button"
                   class="slider slider-active slider-forward"
@@ -160,20 +160,20 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
               <table class="price-table">
                 <tbody>
                   <tr>
-                    <td>Men's haircut</td>
-                    <td>from 300 uah.</td>
+                    <td><div class="cell-wrap">Men's haircut</div></td>
+                    <td><div class="cell-wrap">from 300 uah.</div></td>
                   </tr>
                   <tr>
-                    <td>Beard trim</td>
-                    <td>from 300 uah.</td>
+                    <td><div class="cell-wrap">Beard trim</div></td>
+                    <td><div class="cell-wrap">from 300 uah.</div></td>
                   </tr>
                   <tr>
-                    <td>Mustache trim</td>
-                    <td>from 200 uah.</td>
+                    <td><div class="cell-wrap">Mustache trim</div></td>
+                    <td><div class="cell-wrap">from 200 uah.</div></td>
                   </tr>
                   <tr>
-                    <td>Straight razor shave</td>
-                    <td>from 200 uah.</td>
+                    <td><div class="cell-wrap">Straight razor shave</div></td>
+                    <td><div class="cell-wrap">from 200 uah.</div></td>
                   </tr>
                 </tbody>
               </table>
@@ -182,20 +182,28 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
               <table class="price-table">
                 <tbody>
                   <tr>
-                    <td>Trainee's haircut</td>
-                    <td>from 50 uah.</td>
+                    <td><div class="cell-wrap">Trainee’s haircut</div></td>
+                    <td><div class="cell-wrap">from 50 uah.</div></td>
                   </tr>
                   <tr>
-                    <td>Haircut under the nozzle</td>
-                    <td>from 200 uah.</td>
+                    <td>
+                      <div class="cell-wrap">Haircut under the nozzle</div>
+                    </td>
+                    <td><div class="cell-wrap">from 200 uah.</div></td>
                   </tr>
                   <tr>
-                    <td>Children's haircut (0-12 y.o.)</td>
-                    <td>from 300 uah.</td>
+                    <td>
+                      <div class="cell-wrap">
+                        Children’s haircut (0-12 y.o.)
+                      </div>
+                    </td>
+                    <td><div class="cell-wrap">from 300 uah.</div></td>
                   </tr>
                   <tr>
-                    <td>Camouflage of gray hair</td>
-                    <td>from 200 uah.</td>
+                    <td>
+                      <div class="cell-wrap">Camouflage of gray hair</div>
+                    </td>
+                    <td><div class="cell-wrap">from 200 uah.</div></td>
                   </tr>
                 </tbody>
               </table>
@@ -266,6 +274,56 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
               <div class="team-card-text">
                 <h3 class="employee-name">John Smith</h3>
                 <p class="job-title">Extreme Barber</p>
+                <ul class="media-list">
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="grid">
@@ -278,6 +336,56 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
               <div class="team-card-text">
                 <h3 class="employee-name">Michele Doe</h3>
                 <p class="job-title">Extreme Barber</p>
+                <ul class="media-list">
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="grid">
@@ -290,6 +398,56 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
               <div class="team-card-text">
                 <h3 class="employee-name">Alan Black</h3>
                 <p class="job-title">Extreme Barber</p>
+                <ul class="media-list">
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="media-link"
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="media-icon">
+                        <use href="./img/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>
@@ -370,7 +528,10 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
             <h2 class="section-title section-title-dark-theme">Contacts</h2>
             <address>
               <ul>
-                <li class="contacts-item">
+                <li class="contacts-item contact-item-address">
+                  <svg class="contact-icons" width="24" height="24">
+                    <use href="./img/icons.svg#icon-map-pin"></use>
+                  </svg>
                   <a
                     href="https://goo.gl/maps/XR5gXuHSytpCGpyXA"
                     target="_blank"
@@ -379,12 +540,18 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
                     >st. Vasylkivska, 7A<br />Kiev, 08132</a
                   >
                 </li>
-                <li class="contacts-item">
+                <li class="contacts-item contact-item-tel">
+                  <svg class="contact-icons" width="24" height="24">
+                    <use href="./img/icons.svg#icon-phone"></use>
+                  </svg>
                   <a href="tel:+380441111111" class="contacts"
                     >+38 044 111 11 11</a
                   >
                 </li>
-                <li class="contacts-item">
+                <li class="contacts-item contact-item-mail">
+                  <svg class="contact-icons" width="24" height="24">
+                    <use href="./img/icons.svg#icon-mail"></use>
+                  </svg>
                   <a href="mailto:barbershop@email.com" class="contacts"
                     >barbershop@email.com</a
                   >
