@@ -28,31 +28,80 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     <header>
       <div class="container header-container">
         <a class="logo" href="./index.html">
-          <img src="./img/logo.svg" alt="Barbershop logotype" />
+          <picture>
+            <source srcset="./img/logo-white.svg" media="(max-width: 719px)" />
+            <img
+              src="./img/logo.svg"
+              alt="Barbershop logotype"
+              width="70"
+              height="56"
+            />
+          </picture>
         </a>
-        <nav>
-          <ul class="menu">
-            <li>
-              <a class="menu-item" href="#about">About</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#price">Services and prices</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#team">Barbers</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#contacts">Contacts</a>
-            </li>
-          </ul>
-          <a class="tel" href="tel:+380441111111">+38 044 111 11 11</a>
-          <a class="btn btn-dark-theme" href="#booking"> Online-booking </a>
-        </nav>
+        <button
+          class="menu-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <svg class="menu-btn-svg" width="24" height="16">
+            <use href="./img/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="nav-overlay js-menu-container" id="mobile-menu">
+          <nav>
+            <ul class="menu">
+              <li>
+                <a class="menu-item" href="#about">About</a>
+              </li>
+              <li>
+                <a class="menu-item" href="#price">Services and prices</a>
+              </li>
+              <li>
+                <a class="menu-item" href="#team">Barbers</a>
+              </li>
+              <li>
+                <a class="menu-item" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+            <a class="tel" href="tel:+380441111111">+38 044 111 11 11</a>
+            <a class="btn btn-dark-theme btn-booking-menu" href="#booking">
+              Online-booking
+            </a>
+            <div class="media-list-mobile-menu-wrapper">
+              <ul class="media-list-mobile-menu">
+                <li class="media-item">
+                  <a
+                    class="media-link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="media-item">
+                  <a
+                    class="media-link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Youtube</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <button class="btn-menu-close js-close-menu" type="button">
+              <svg class="close-svg" width="19" height="19">
+                <use href="./img/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
       <!-- Hero -->
-      <section class="hero-wrapper">
+      <section class="hero-wrapper slider1">
         <div class="container hero-container">
           <ul class="media-list">
             <li class="media-item">
@@ -81,7 +130,7 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
               </p>
               <h1 class="hero-title">BarberShop</h1>
               <p class="section-descr section-descr-dark-theme">
-                We are experts in trendy men's haircuts. We work quickly,
+                We are experts in trendy men's haircuts.<br />We work quickly,
                 carefully and with style.
               </p>
             </div>
@@ -104,28 +153,107 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
       <!-- About -->
       <section id="about" class="section">
         <div class="container about-container">
-          <ul class="about-photo">
+          <ul class="about-photo grid">
             <li>
-              <img
-                src="./img/about/img-1.jpg"
-                alt="Beard trim"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/about/desktop/img-1.webp    1x,
+                    ./img/about/desktop/img-1@2x.webp 2x,
+                    ./img/about/desktop/img-1@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/about/desktop/img-1.jpg    1x,
+                    ./img/about/desktop/img-1@2x.jpg 2x,
+                    ./img/about/desktop/img-1@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./img/about/tablet/img-1.webp    1x,
+                    ./img/about/tablet/img-1@2x.webp 2x,
+                    ./img/about/tablet/img-1@3x.webp 3x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/about/tablet/img-1.jpg    1x,
+                    ./img/about/tablet/img-1@2x.jpg 2x,
+                    ./img/about/tablet/img-1@3x.jpg 3x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./img/about/tablet/img-1.jpg"
+                  alt="Beard trim"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li>
-              <img
-                src="./img/about/img-2.jpg"
-                alt="Straight razor shave"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/about/desktop/img-2.webp    1x,
+                    ./img/about/desktop/img-2@2x.webp 2x,
+                    ./img/about/desktop/img-2@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/about/desktop/img-2.jpg    1x,
+                    ./img/about/desktop/img-2@2x.jpg 2x,
+                    ./img/about/desktop/img-2@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./img/about/tablet/img-2.webp    1x,
+                    ./img/about/tablet/img-2@2x.webp 2x,
+                    ./img/about/tablet/img-2@3x.webp 3x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/about/tablet/img-2.jpg    1x,
+                    ./img/about/tablet/img-2@2x.jpg 2x,
+                    ./img/about/tablet/img-2@3x.jpg 3x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./img/about/mobile/img-2.jpg"
+                  alt="Straight razor shave"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
-          <div class="about-wrapper">
+          <div class="about-wrapper grid">
             <p class="subtitle subtitle-light-theme">About</p>
             <h2 class="section-title section-title-light-theme">
-              Best Barbershop in your city
+              Best Barbershop in <br />
+              your city
             </h2>
             <p class="section-descr section-descr-light-theme">
               If you want to add more confidence to your image, you should visit
@@ -255,7 +383,7 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
       </section>
       <!-- Team -->
       <section id="team" class="section">
-        <div class="container">
+        <div class="container team-container">
           <p class="subtitle subtitle-light-theme">
             For true enjoyers of the atmosphere
           </p>
@@ -266,12 +394,69 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
           </h2>
           <ul class="team-cards">
             <li class="grid">
-              <img
-                src="./img/team/john-smith.jpg"
-                alt="John Smith"
-                width="370"
-                height="346"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/team/desktop/john-smith.webp    1x,
+                    ./img/team/desktop/john-smith@2x.webp 2x,
+                    ./img/team/desktop/john-smith@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/team/desktop/john-smith.jpg    1x,
+                    ./img/team/desktop/john-smith@2x.jpg 2x,
+                    ./img/team/desktop/john-smith@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./img/team/tablet/john-smith.webp    1x,
+                    ./img/team/tablet/john-smith@2x.webp 2x,
+                    ./img/team/tablet/john-smith@3x.webp 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/team/tablet/john-smith.jpg    1x,
+                    ./img/team/tablet/john-smith@2x.jpg 2x,
+                    ./img/team/tablet/john-smith@3x.jpg 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./img/team/mobile/john-smith.webp    1x,
+                    ./img/team/mobile/john-smith@2x.webp 2x,
+                    ./img/team/mobile/john-smith@3x.webp 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/team/mobile/john-smith.jpg    1x,
+                    ./img/team/mobile/john-smith@2x.jpg 2x,
+                    ./img/team/mobile/john-smith@3x.jpg 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./img/team/mobile/john-smith.jpg"
+                  alt="John Smith"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-card-text">
                 <h3 class="employee-name">John Smith</h3>
                 <p class="job-title">Extreme Barber</p>
@@ -328,12 +513,70 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
               </div>
             </li>
             <li class="grid">
-              <img
-                src="./img/team/michele-doe.jpg"
-                alt="Michele Doe"
-                width="370"
-                height="346"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/team/desktop/michele-doe.webp    1x,
+                    ./img/team/desktop/michele-doe@2x.webp 2x,
+                    ./img/team/desktop/michele-doe@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/team/desktop/michele-doe.jpg    1x,
+                    ./img/team/desktop/michele-doe@2x.jpg 2x,
+                    ./img/team/desktop/michele-doe@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./img/team/tablet/michele-doe.webp    1x,
+                    ./img/team/tablet/michele-doe@2x.webp 2x,
+                    ./img/team/tablet/michele-doe@3x.webp 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/team/tablet/michele-doe.jpg    1x,
+                    ./img/team/tablet/michele-doe@2x.jpg 2x,
+                    ./img/team/tablet/michele-doe@3x.jpg 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./img/team/mobile/michele-doe.webp    1x,
+                    ./img/team/mobile/michele-doe@2x.webp 2x,
+                    ./img/team/mobile/michele-doe@3x.webp 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/team/mobile/michele-doe.jpg    1x,
+                    ./img/team/mobile/michele-doe@2x.jpg 2x,
+                    ./img/team/mobile/michele-doe@3x.jpg 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./img/team/mobile/michele-doe.jpg"
+                  alt="Michele Doe"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team-card-text">
                 <h3 class="employee-name">Michele Doe</h3>
                 <p class="job-title">Extreme Barber</p>
@@ -390,12 +633,70 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
               </div>
             </li>
             <li class="grid">
-              <img
-                src="./img/team/alan-black.jpg"
-                alt="Alan Black"
-                width="370"
-                height="346"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/team/desktop/alan-black.webp    1x,
+                    ./img/team/desktop/alan-black@2x.webp 2x,
+                    ./img/team/desktop/alan-black@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/team/desktop/alan-black.jpg    1x,
+                    ./img/team/desktop/alan-black@2x.jpg 2x,
+                    ./img/team/desktop/alan-black@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./img/team/tablet/alan-black.webp    1x,
+                    ./img/team/tablet/alan-black@2x.webp 2x,
+                    ./img/team/tablet/alan-black@3x.webp 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/team/tablet/alan-black.jpg    1x,
+                    ./img/team/tablet/alan-black@2x.jpg 2x,
+                    ./img/team/tablet/alan-black@3x.jpg 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./img/team/mobile/alan-black.webp    1x,
+                    ./img/team/mobile/alan-black@2x.webp 2x,
+                    ./img/team/mobile/alan-black@3x.webp 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/team/mobile/alan-black.jpg    1x,
+                    ./img/team/mobile/alan-black@2x.jpg 2x,
+                    ./img/team/mobile/alan-black@3x.jpg 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./img/team/mobile/alan-black.jpg"
+                  alt="Alan Black"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team-card-text">
                 <h3 class="employee-name">Alan Black</h3>
                 <p class="job-title">Extreme Barber</p>
@@ -463,36 +764,264 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
           <h2 class="visually-hidden">Photo gallery</h2>
           <ul class="photo-gallery">
             <li class="grid">
-              <img
-                src="./img/gallery/img-1.jpg"
-                alt="Men's haircut"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/desktop/img-1.webp    1x,
+                    ./img/gallery/desktop/img-1@2x.webp 2x,
+                    ./img/gallery/desktop/img-1@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/desktop/img-1.jpg    1x,
+                    ./img/gallery/desktop/img-1@2x.jpg 2x,
+                    ./img/gallery/desktop/img-1@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./img/gallery/tablet/img-1.webp    1x,
+                    ./img/gallery/tablet/img-1@2x.webp 2x,
+                    ./img/gallery/tablet/img-1@3x.webp 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/tablet/img-1.jpg    1x,
+                    ./img/gallery/tablet/img-1@2x.jpg 2x,
+                    ./img/gallery/tablet/img-1@3x.jpg 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/mobile/img-1.webp    1x,
+                    ./img/gallery/mobile/img-1@2x.webp 2x,
+                    ./img/gallery/mobile/img-1@3x.webp 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/mobile/img-1.jpg    1x,
+                    ./img/gallery/mobile/img-1@2x.jpg 2x,
+                    ./img/gallery/mobile/img-1@3x.jpg 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./img/gallery/mobile/img-1.jpg"
+                  alt="Men's haircut"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="grid">
-              <img
-                src="./img/gallery/img-2.jpg"
-                alt="Beard trim"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/desktop/img-2.webp    1x,
+                    ./img/gallery/desktop/img-2@2x.webp 2x,
+                    ./img/gallery/desktop/img-2@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/desktop/img-2.jpg    1x,
+                    ./img/gallery/desktop/img-2@2x.jpg 2x,
+                    ./img/gallery/desktop/img-2@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./img/gallery/tablet/img-2.webp    1x,
+                    ./img/gallery/tablet/img-2@2x.webp 2x,
+                    ./img/gallery/tablet/img-2@3x.webp 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/tablet/img-2.jpg    1x,
+                    ./img/gallery/tablet/img-2@2x.jpg 2x,
+                    ./img/gallery/tablet/img-2@3x.jpg 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/mobile/img-2.webp    1x,
+                    ./img/gallery/mobile/img-2@2x.webp 2x,
+                    ./img/gallery/mobile/img-2@3x.webp 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/mobile/img-2.jpg    1x,
+                    ./img/gallery/mobile/img-2@2x.jpg 2x,
+                    ./img/gallery/mobile/img-2@3x.jpg 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./img/gallery/mobile/img-2.jpg"
+                  alt="Beard trim"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="grid">
-              <img
-                src="./img/gallery/img-3.jpg"
-                alt="Barbershop service"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/desktop/img-3.webp    1x,
+                    ./img/gallery/desktop/img-3@2x.webp 2x,
+                    ./img/gallery/desktop/img-3@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/desktop/img-3.jpg    1x,
+                    ./img/gallery/desktop/img-3@2x.jpg 2x,
+                    ./img/gallery/desktop/img-3@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./img/gallery/tablet/img-3.webp    1x,
+                    ./img/gallery/tablet/img-3@2x.webp 2x,
+                    ./img/gallery/tablet/img-3@3x.webp 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/tablet/img-3.jpg    1x,
+                    ./img/gallery/tablet/img-3@2x.jpg 2x,
+                    ./img/gallery/tablet/img-3@3x.jpg 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/mobile/img-3.webp    1x,
+                    ./img/gallery/mobile/img-3@2x.webp 2x,
+                    ./img/gallery/mobile/img-3@3x.webp 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/mobile/img-3.jpg    1x,
+                    ./img/gallery/mobile/img-3@2x.jpg 2x,
+                    ./img/gallery/mobile/img-3@3x.jpg 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./img/gallery/mobile/img-3.jpg"
+                  alt="Barbershop service"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="grid">
-              <img
-                src="./img/gallery/img-4.jpg"
-                alt="Straight razor shave"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery/desktop/img-4.webp    1x,
+                    ./img/gallery/desktop/img-4@2x.webp 2x,
+                    ./img/gallery/desktop/img-4@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/desktop/img-4.jpg    1x,
+                    ./img/gallery/desktop/img-4@2x.jpg 2x,
+                    ./img/gallery/desktop/img-4@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./img/gallery/tablet/img-4.webp    1x,
+                    ./img/gallery/tablet/img-4@2x.webp 2x,
+                    ./img/gallery/tablet/img-4@3x.webp 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/tablet/img-4.jpg    1x,
+                    ./img/gallery/tablet/img-4@2x.jpg 2x,
+                    ./img/gallery/tablet/img-4@3x.jpg 3x
+                  "
+                  media="(min-width: 720px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/mobile/img-4.webp    1x,
+                    ./img/gallery/mobile/img-4@2x.webp 2x,
+                    ./img/gallery/mobile/img-4@3x.webp 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/gallery/mobile/img-4.jpg    1x,
+                    ./img/gallery/mobile/img-4@2x.jpg 2x,
+                    ./img/gallery/mobile/img-4@3x.jpg 3x
+                  "
+                  media="(max-width: 719px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./img/gallery/mobile/img-4.jpg"
+                  alt="Straight razor shave"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -546,44 +1075,48 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
           <section id="contacts" class="section grid">
             <div class="contacts-container">
               <h2 class="section-title section-title-dark-theme">Contacts</h2>
-              <address>
-                <ul>
-                  <li class="contacts-item contact-item-address">
-                    <svg class="contact-icons" width="24" height="24">
-                      <use href="./img/icons.svg#icon-map-pin"></use>
-                    </svg>
-                    <a
-                      href="https://goo.gl/maps/XR5gXuHSytpCGpyXA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="address"
-                      >st. Vasylkivska, 7A<br />Kiev, 08132</a
-                    >
-                  </li>
-                  <li class="contacts-item contact-item-tel">
-                    <svg class="contact-icons" width="24" height="24">
-                      <use href="./img/icons.svg#icon-phone"></use>
-                    </svg>
-                    <a href="tel:+380441111111" class="contacts"
-                      >+38 044 111 11 11</a
-                    >
-                  </li>
-                  <li class="contacts-item contact-item-mail">
-                    <svg class="contact-icons" width="24" height="24">
-                      <use href="./img/icons.svg#icon-mail"></use>
-                    </svg>
-                    <a href="mailto:barbershop@email.com" class="contacts"
-                      >barbershop@email.com</a
-                    >
-                  </li>
-                </ul>
-              </address>
-              <div class="working-hours">
-                <h2 class="subtitle subtitle-dark-theme">Working hours</h2>
-                <p class="section-descr section-descr-dark-theme">
-                  Every day from <time datetime="09:00">9:00</time> to
-                  <time datetime="22:00">22:00</time>
-                </p>
+              <div class="contacts-wrapper">
+                <address>
+                  <ul>
+                    <li class="contacts-item contact-item-address">
+                      <svg class="contact-icons" width="24" height="24">
+                        <use href="./img/icons.svg#icon-map-pin"></use>
+                      </svg>
+                      <a
+                        href="https://goo.gl/maps/XR5gXuHSytpCGpyXA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="address"
+                        >st. Vasylkivska, 7A<br />Kiev, 08132</a
+                      >
+                    </li>
+                    <li class="contacts-item contact-item-tel">
+                      <svg class="contact-icons" width="24" height="24">
+                        <use href="./img/icons.svg#icon-phone"></use>
+                      </svg>
+                      <a href="tel:+380441111111" class="contacts"
+                        >+38 044 111 11 11</a
+                      >
+                    </li>
+                    <li class="contacts-item contact-item-mail">
+                      <svg class="contact-icons" width="24" height="24">
+                        <use href="./img/icons.svg#icon-mail"></use>
+                      </svg>
+                      <a href="mailto:barbershop@email.com" class="contacts"
+                        >barbershop@email.com</a
+                      >
+                    </li>
+                  </ul>
+                </address>
+                <div class="working-hours">
+                  <h2 class="subtitle subtitle-dark-theme hours-title">
+                    Working hours
+                  </h2>
+                  <p class="section-descr section-descr-dark-theme">
+                    Every day from <time datetime="09:00">9:00</time> to
+                    <time datetime="22:00">22:00</time>
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -615,5 +1148,12 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
         </ul>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
