@@ -137,10 +137,13 @@ button {
 
 .btn-dark-theme {
   color: var(--main-dark-theme-color);
+
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .btn-light-theme {
   color: var(--main-light-theme-color);
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .booking-btn-light-theme {
@@ -160,6 +163,8 @@ button {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: var(--main-light-theme-color);
+
+  transition: color var(--transition);
 }
 
 .menu-item:hover,
@@ -443,6 +448,8 @@ nav {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: var(--main-dark-theme-color);
+
+  transition: color var(--transition);
 }
 
 @media screen and (max-width: 719px) {
@@ -520,10 +527,6 @@ nav {
 
   top: 48px;
   right: 15px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   width: 40px;
   height: 40px;
@@ -1335,6 +1338,8 @@ nav {
 
 .team-media-item {
   color: var(--main-light-theme-color);
+
+  transition: color var(--transition);
 }
 
 .media-icon {
