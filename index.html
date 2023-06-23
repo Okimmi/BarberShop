@@ -134,14 +134,54 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
                 carefully and with style.
               </p>
             </div>
+            <ul class="slider-navigator">
+              <li class="slider-line-list">
+                <input
+                  type="radio"
+                  id="slider-line-wrapper1"
+                  name="slider-radio"
+                  class="slider-line-check"
+                  value="1"
+                  checked
+                />
+                <label for="slider-line-wrapper1" class="slider-line"></label>
+              </li>
+              <li class="slider-line-list">
+                <input
+                  type="radio"
+                  id="slider-line-wrapper2"
+                  name="slider-radio"
+                  class="slider-line-check"
+                  value="2"
+                />
+                <label for="slider-line-wrapper2" class="slider-line"></label>
+              </li>
+              <li class="slider-line-list">
+                <input
+                  type="radio"
+                  id="slider-line-wrapper3"
+                  name="slider-radio"
+                  class="slider-line-check"
+                  value="3"
+                />
+                <label for="slider-line-wrapper3" class="slider-line"></label>
+              </li>
+            </ul>
             <ul class="slider-container">
               <li class="slider-wrapper">
-                <button type="button" class="slider slider-back">Back</button>
+                <button
+                  type="button"
+                  class="slider slider-back"
+                  data-slide-action="back"
+                >
+                  Back
+                </button>
               </li>
               <li class="slider-wrapper slider-active">
                 <button
                   type="button"
                   class="slider slider-active slider-forward"
+                  data-slide-action="forward"
                 >
                   Forward
                 </button>
@@ -1154,6 +1194,7 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-    <script defer src="js/mobile-menu.js"></script>
+    <script src="js/mobile-menu.js" type="module"></script>
+    <script src="js/slider.js" type="module"></script>
   </body>
 </html>
